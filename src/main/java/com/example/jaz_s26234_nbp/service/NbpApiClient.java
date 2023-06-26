@@ -15,14 +15,14 @@ public class NbpApiClient {
         this.nbpApiResponse = nbpApiResponse;
     }
 
-    public GoldData getCurrencyData(String currencyCode, String startDate, String endDate) {
-        String apiUrl = API_URL + "exchangerates/rates/A/" + currencyCode + "/" + startDate + "/" + endDate + "/";
+    public GoldData getCurrencyData(String currencyGold, String startDate, String endDate) {
+        String apiUrl = API_URL + "exchangerates/rates/A/" + currencyGold + "/" + startDate + "/" + endDate + "/";
 
         RestTemplate restTemplate = new RestTemplate();
         nbpApiResponse.setRates(restTemplate.getForObject(apiUrl, NbpApiResponse.class).getRates());
 
 
-        GoldData goldData = new GoldData(currencyCode, nbpApiResponse.getRates());
+        GoldData goldData = new GoldData(currencyGold, nbpApiResponse.getRates());
 
         return goldData;
     }
