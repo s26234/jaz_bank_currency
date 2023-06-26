@@ -11,6 +11,7 @@ public class JazS26234NbpApplication {
 
 
         System.out.println("hello");
+        System.out.println("test push");
     }
 
 }
