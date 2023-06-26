@@ -10,8 +10,6 @@ import org.springframework.web.client.ResourceAccessException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-
-
     @ExceptionHandler(HttpClientErrorException.NotFound.class)
     public ResponseEntity<Void> handleNotFound1(HttpClientErrorException.NotFound exception) {
         return ResponseEntity.notFound().build();

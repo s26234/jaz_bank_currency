@@ -8,10 +8,6 @@ public class JazS26234NbpApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(JazS26234NbpApplication.class, args);
-
-
-        System.out.println("hello");
-        System.out.println("test push");
     }
 
 }
